@@ -100,15 +100,17 @@ public class MainActivity extends AppCompatActivity {
         // TODO Auto-generated method stub
         if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-            if (!isshow) {
+            if (!isshow)
+            {
 //                 返回键 结束掉 视图
                 if (adManager != null) {
-
                     adManager.dismissAdDialog();//  好像没有调用 setOnCloseClickListener 方法
-
                     isshow = true;
                 }
 
+            }else {
+
+                onBackPressed();
             }
         }
         return false;
